@@ -27,9 +27,19 @@
 					Contactenos
 				</li>
 
-				<li class="col-md">
-					Iniciar sesion
-				</li>		
+				<% if current_user %>							
+					<li class="col-md">
+  						<%= current_user.name %> 
+  					</li>
+  					
+  					<li class="col-md">
+  						<%= link_to "Cerrar sesion", '/logout' %>
+  					</li>
+				<% else %>
+					<li class="col-md">
+  						<%= link_to 'Iniciar sesion', login_path %>
+  					</li>
+				<% end %>	
 			</ul>
 		</nav>
 	</header>

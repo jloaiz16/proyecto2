@@ -1,4 +1,6 @@
 /* CSS de la aplicacion*/
+
+/* Barra de Navegacion*/
 html, body {
 	margin: 0px;
 	font-family: 'Lato', sans-serif;
@@ -29,4 +31,49 @@ a,a:visited{
 ul { 
 	list-style: none;
 	 margin: 20px;
+}
+
+/* Formulario */
+.field {
+	margin-top: 1em;
+}
+
+.form-control {
+	border: none;
+	border-bottom: 1.2px solid;
+	outline: none;
+	width: 100%;
+	display: block;
+	padding: 10px 0px;
+	font-size: 1.2em;
+}
+
+.btn {
+	border: none;
+ 	background: #012D3B;
+ 	color: rgb(255,214,160);
+ 	padding: 10px;
+ 	font-size: 16px;
+ 	border-radius: 5px;
+ 	position: relative;
+ 	box-sizing: border-box;
+ 	transition: all 500ms ease;
+ 	cursor: pointer;
+}
+
+.btn:hover {
+	background: rgba(0,0,0,0);
+ 	color: #012D3B;
+ 	box-shadow: inset 0 0 0 3px #012D3B;
+}
+
+.btn2 {
+	padding: 12px;
+ 	font-size: 16px;
+ 	border-radius: 5px;
+ 	position: relative;
+ 	box-sizing: border-box;
+	background: rgba(0,0,0,0);
+ 	color: rgb(19,84,75);
+ 	box-shadow: inset 0 0 0 3px rgb(19,84,75);	
 }

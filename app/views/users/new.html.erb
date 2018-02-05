@@ -1,0 +1,22 @@
+<div style="width: 70%; margin:0 auto; ">
+<h1>Registrarse</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+	<div class="field">
+  		<%= f.text_field :name, placeholder: "Nombre", class:"form-control" %>
+	</div>
+	<div class="field">
+		<%= f.text_field :email, placeholder: "Email", class:"form-control" %>
+	</div>
+	<div class="field">
+		<%= f.password_field :password, placeholder: "Contraseña", class:"form-control" %> 
+	</div>
+	<div class="field">
+		<%= f.password_field :password_confirmation, placeholder:"Confirme contraseña", class:"form-control" %> 		 
+	</div>
+  	<div class="field">
+  		<%= f.submit "Enviar", class:"btn" %>
+  	</div>	
+
+<% end %>
+</div>

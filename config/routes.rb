@@ -4,4 +4,13 @@ Rails.application.routes.draw do
 
   # Defino ruta de peticion
   get 'welcome/index'
+
+  # Rutas para usuarios
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  # Rutas para sesiones
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 end
