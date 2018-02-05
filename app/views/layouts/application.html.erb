@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rute</title>
+  <!-- Fuente del proyecto-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>RUTE</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<!-- Implementacion de barra de navegacion de la aplicacion-->
+	<header>
+		<nav class="be-red white large-padding">
+			<ul class="no-list row center-xs around-xs middle-xs">
+				<li class="col-md">
+					<h1 class="no-margin" id="logo">RUTE</h1> 
+				</li>
+
+				<li class="col-md">
+					<%= link_to 'Inicio', root_path %>
+				</li>
+				
+				<li class="col-md">
+					Contactenos
+				</li>
+
+				<li class="col-md">
+					Iniciar sesion
+				</li>		
+			</ul>
+		</nav>
+	</header>
 
 <%= yield %>
 

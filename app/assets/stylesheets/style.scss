@@ -1,0 +1,32 @@
+/* CSS de la aplicacion*/
+html, body {
+	margin: 0px;
+	font-family: 'Lato', sans-serif;
+}
+
+a,a:visited{
+	color: inherit !important;
+	text-decoration: none;
+}
+
+#logo {
+	font-size: 1.4em;
+	margin: 0px;
+}
+
+.be-red {
+	background-color: #012D3B;
+}
+
+.white {
+	color: rgb(255,214,160);
+}
+
+.large-padding {
+	padding: 8px 5px;
+}
+
+ul { 
+	list-style: none;
+	 margin: 20px;
+}
