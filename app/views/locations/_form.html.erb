@@ -1,0 +1,39 @@
+<!-- Vista parcial, se comparte en varias vistas -->
+<%= form_for @location do |f| %>
+  <% if @location.errors.any? %>  <!-- Comprobamos si existen errores al llenar el formulario-->
+  <div id="error_explanation">
+    <h2><%pluralize(@location.errors.count, "error") %>
+      No se pudo guardar este post:
+    </h2>
+    <ul>
+      <% @location.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <%end%>
+  <div class="field">
+    <!-- :title campo de la base de datos que se va a modificar-->
+    <%= f.text_field :latitude, placeholder: "Ingrese latitud", class:"form-control" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.text_field :longitude, placeholder: "Ingrese longitud", class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :addres, placeholder: "Ingrese direccion", class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :description, placeholder: "Ingrese descripcion", class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Ingrese titulo", class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.submit "Guardar", class:"btn"%>
+    <%= link_to 'Volver', locations_path, class:"btn2" %>
+  </div>
+<% end %>

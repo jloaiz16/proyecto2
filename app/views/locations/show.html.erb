@@ -1,0 +1,38 @@
+<div style="width: 70%; margin:0 auto; ">
+
+<h1>Descripcion de la ruta</h1>
+
+<table style="width: 100%;">
+	<tr>
+		<th>Latitud</th>
+		<td><%= @location.latitude %></td>
+	</tr>
+
+	<tr style="height: 100px;">
+		<th>Longitud</th>
+		<td><%= @location.longitude %></td>
+	</tr>
+
+	<tr style="height: 100px;">
+		<th>Direccion</th>
+		<td><%= @location.addres %></td>
+	</tr>
+
+	<tr style="height: 100px;">
+		<th>Descripcion</th>
+		<td><%= @location.description %></td>
+	</tr>
+
+	<tr style="height: 100px;">
+		<th>Titulo</th>
+		<td><%= @location.title %></td>
+	</tr>
+
+</table>
+
+<div style="margin-top:50px";>
+	<%= link_to 'Volver', locations_path, class:"btn2", style:"margin-top:50px;" %>
+	<%= link_to 'Editar', edit_location_path(@location), class:"btn2", style:"margin-top:50px;"%>
+</div>
+
+</div>

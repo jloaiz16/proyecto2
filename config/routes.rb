@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # Defino pagina inicial
   root 'welcome#index'
 
+  # Defino rutas de las localizaciones
+  resources :locations
+  
   # Defino ruta de peticion
   get 'welcome/index'
 

@@ -27,7 +27,11 @@
 					Contactenos
 				</li>
 
-				<% if current_user %>							
+				<% if current_user %>					
+					<li class="col-md">
+						<%= link_to 'Rutas', locations_path %>
+					</li>
+		
 					<li class="col-md">
   						<%= current_user.name %> 
   					</li>
