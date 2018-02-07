@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	#GET /singup/
 	def new
+        @user = User.new
     end
 
     #POST /users/
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
     		session[:user_id] = @user.id
     		redirect_to '/'
     	else
-    		redirect_to '/singup'
+    		render 'new'
     	end
     end 
 

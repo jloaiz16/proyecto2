@@ -1,7 +1,12 @@
 <div style="width: 70%; margin:0 auto; ">
 <h1>Registrarse</h1>
 
-<%= form_for :user, url: '/users' do |f| %>
+<%= form_for(@user) do |f| %>
+	<% @user.errors.full_messages.each do |message|%>
+		<div class="be-red white top-space">
+  			* <%= message %>
+		</div>
+	<% end %>
 	<div class="field">
   		<%= f.text_field :name, placeholder: "Nombre", class:"form-control" %>
 	</div>

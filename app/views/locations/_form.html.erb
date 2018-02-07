@@ -3,7 +3,7 @@
   <% if @location.errors.any? %>  <!-- Comprobamos si existen errores al llenar el formulario-->
   <div id="error_explanation">
     <h2><%pluralize(@location.errors.count, "error") %>
-      No se pudo guardar este post:
+      No se pudo guardar este ruta:
     </h2>
     <ul>
       <% @location.errors.full_messages.each do |msg| %>

@@ -32,6 +32,12 @@ class LocationsController < ApplicationController
 	#GET locations/ - lista de elemento creados
 	def index
 		@location = Location.where("user_id LIKE ?", current_user.id)
+		@hash = Gmaps4rails.build_markers(@location) do |rutes, marker|
+  			marker.lat rutes.latitude
+  			marker.lng rutes.longitude
+  			#marker.infoWindow rutes.description
+  			marker.json({ title: rutes.title})
+  		end
 	end
 
 	#GET locations/:id/edit - retorna informacion para editar
