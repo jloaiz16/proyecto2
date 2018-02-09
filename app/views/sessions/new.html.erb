@@ -1,9 +1,14 @@
 <div style="width: 70%; margin:0 auto; ">
-<h1>Inicio de sesion</h1>
-	<%= form_tag '/login' do %>
-		Email: <br> <%= text_field_tag :email%> <br>
- 		Contraseña: <br> <%= password_field_tag :password %> <br>
-		 <%= submit_tag "Enviar" %>
-	<% end %>
-	¿No tienes una cuenta? <%= link_to 'Registrate', '/signup' %>
+	<div class="logo"></div>
+	<div class="login-block">
+		<h1>Iniciar sesion</h1>
+		<%= form_tag '/login' do %>
+			<%= text_field_tag :email, "", class: 'username', placeholder: 'Email'%> <br>
+ 			<%= password_field_tag :password, "", class: 'contra',  placeholder: 'Contraseña' %> <br>
+		 	<%= submit_tag "Enviar", class: 'btn-login' %>
+		<% end %>
+		<div class="no-account">
+			¿No tienes una cuenta? <b style="color:#2E9AFE;"><%= link_to 'Registrate', '/signup' %></b>
+		</div> 
+	</div>
 </div>

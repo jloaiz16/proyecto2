@@ -14,11 +14,11 @@
   <%end%>
   <div class="field">
     <!-- :title campo de la base de datos que se va a modificar-->
-    <%= f.text_field :latitude, placeholder: "Ingrese latitud", class:"form-control" %>
+    <%= f.text_field :latitude, placeholder: "Ingrese latitud", class:"form-control", :id=>"latitude", :value => "" %>
   </div>
  
   <div class="field">
-    <%= f.text_field :longitude, placeholder: "Ingrese longitud", class:"form-control" %>
+    <%= f.text_field :longitude, placeholder: "Ingrese longitud", class:"form-control", :id=>"longitude", :value => "" %>
   </div>
 
   <div class="field">
@@ -37,3 +37,45 @@
     <%= link_to 'Volver', locations_path, class:"btn2" %>
   </div>
 <% end %>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+    $("#latitude").var("value", position.coords.latitude);
+    $("#longitude").var("value", position.coords.latitude);
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
