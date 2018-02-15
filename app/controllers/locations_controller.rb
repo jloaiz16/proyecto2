@@ -35,7 +35,7 @@ class LocationsController < ApplicationController
 
 	#GET locations/ - lista de elemento creados
 	def index
-		@location = Location.where("cast(user_id AS TEXT) LIKE ?", current_user.id)
+		@location = Location.where("cast(user_id AS INTEGER) LIKE ?", current_user.id)
 		@hash = Gmaps4rails.build_markers(@location) do |rutes, marker|
   			marker.lat rutes.latitude
   			marker.lng rutes.longitude
