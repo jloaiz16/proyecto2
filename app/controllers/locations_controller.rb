@@ -10,7 +10,11 @@ class LocationsController < ApplicationController
 	def create
 		@location = current_user.locations.new(location_params) #Extrae los parametros
 		if @location.save 
-			redirect_to @location #Guarda el modelo en la base de datos
+			respond_to do |format|
+    			format.html { redirect_to new_location_path }
+    			format.js { }
+				#redirect_to @rute #Guarda el modelo en la base de datos
+			end
 		else
 			render 'new'
 		end
