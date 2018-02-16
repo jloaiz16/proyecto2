@@ -18,9 +18,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   #<<: *default
-  database: db/test.sqlite3
+  #database: db/test.sqlite3
   adapter: postgresql
-  #database: rutes_test
+  database: rutes_test
   user: pguser
   password: 123
   host: localhost
@@ -31,9 +31,9 @@ test:
 
 production:
   #<<: *default
-  database: db/production.sqlite3
+  #database: db/production.sqlite3
   adapter: postgresql
-  #database: rutes
+  database: rutes
   user: pguser
   password: 123
   host: localhost
