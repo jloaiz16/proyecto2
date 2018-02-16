@@ -20,7 +20,7 @@ test:
   #<<: *default
   #database: db/test.sqlite3
   adapter: postgresql
-  database: rutes_test
+  database: rute_test
   user: pguser
   password: 123
   host: localhost
@@ -33,7 +33,7 @@ production:
   #<<: *default
   #database: db/production.sqlite3
   adapter: postgresql
-  database: rutes
+  database: rute_production
   user: pguser
   password: 123
   host: localhost
