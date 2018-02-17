@@ -20,81 +20,35 @@ Para el desarrollo de este proyecto se utilizó el lenguaje de programación <tt
 
 == Instalación
 
-Para instalar las tecnologías [<tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>PostgreSQL</tt> y <tt>Git</tt>.], se siguió las siguientes guías:
+Para instalar las tecnologías [<tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>Heroku</tt> y <tt>Git</tt>], se siguió las siguientes guías:
 
 * Setup Ruby On Rails on Ubuntu 17.10: https://gorails.com/setup/ubuntu/17.10
 * Heroku CLI: https://devcenter.heroku.com/articles/heroku-cli
 
 == Desarrollo
 
-1. Modulo de locations
-	* Este modulo comprende de unas vistas, modelo y un controlador:
+1. Modulo de locations:
+	* Para la creación de este CRUD, se siguió esta guía: http://librosweb.es/libro/introduccion_rails/capitulo_5.html
+2. Modulo de user, sessios:
+	* Parala gestion de usuarios y sesiones, se siguió esta guía: https://gist.github.com/thebucknerlife/10090014
+3. API de Google Maps: 
+	* Para la visualización de la locaciones en el mapa se usaron las gemas <tt>gmaps4rails</tt> y <tt>geocoder</tt>, también se siguió la documentación de google: https://developers.google.com/maps/web/
 
-	class LocationsController < ApplicationController
-	before_filter :authorize
+== Despliegue Heroku 
 
-	#GET locations/new
-	def new
-		@location = Location.new
-	end
-	
-	#POST locations/
-	def create
-		@location = current_user.locations.new(location_params) #Extrae los parametros
-		if @location.save 
-			respond_to do |format|
-    			format.html { redirect_to new_location_path }
-    			format.js { }
-				#redirect_to @rute #Guarda el modelo en la base de datos
-			end
-		else
-			render 'new'
-		end
-	end
+Para el despliegue en Heroku, se creo una cuenta en la página, se descargó el Heroku toolbelt, se enlazó con el repositorio en Git y se siguió este tutorial para subir la app a Heroku: https://www.youtube.com/watch?v=0Dc-eVNA8ZM
 
- 	#DELETE /locations/:id(
-	def destroy
-  		@location = Location.find(params[:id])
-	  	@location.destroy
- 
-  		redirect_to locations_path
-	end
+== Despliegue DCA
 
-	#GET locations/:id - muestra el elemento creado
-	def show
-		@location = Location.find(params[:id])
-	end
+Para el despliegue en el Data Center Academico, se configuro el ambiente en el servidor, se intalaron las tecnologías pertinente y se siguió la guía realizada por el profesor de la materia, la cual se encuentra en el siguiente link: https://github.com/st0263eafit/appwebArticulosRails
 
-	#GET locations/ - lista de elemento creados
-	def index
-		#@location = Location.where("user_id LIKE ?", current_user.id)
-		@location = current_user.locations
-		@hash = Gmaps4rails.build_markers(@location) do |rutes, marker|
-  			marker.lat rutes.latitude
-  			marker.lng rutes.longitude
-  			#marker.infoWindow rutes.description
-  			marker.json({ title: rutes.title})
-  		end
-	end
+== Conclusiones
 
-	#GET locations/:id/edit - retorna informacion para editar
-	def edit
-		@location = Location.find(params[:id])
-	end
+Para ser la primera vez realizando una aplicación WEB tanto como el uso de <tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>Heroku</tt> y <tt>Git</tt> el resultado obtenido es muy positivo. Más allá de las funcionalidades logradas, el aprendizaje obtenido es mucho más valioso. Lastimosamente no se pudo lograr que la aplicación funcionara correctamente en los tres ambientes [localhost, DCA y Heroku]. Para el localhost y Heroku, la aplicación funciona correcto y cumple con todos los requerimientos, cosa que no pudo suceder en el DCA ya que no se pudo desplegar por varios errores que no se pudieron resolver.
 
-	#PATCH locations/:id
-	def update 
-		@location = Location.find(params[:id])
+== Resultados
 
-		if @location.update(location_params)
-			redirect_to @location
-		else
-			render 'edit'
-		end
-	end
-
-	private
-		def location_params #Por seguridad debemos especificar a rails que parametros vamos a recibir
-			params.require(:location).permit(:latitude, :longitude, :addres, :description, :title)
-		end
-	end
+1. Heroku:
+	* La pruebas se realizaron con el siguiente usuario, email: moralito@eafit.edu.co y password: 1234. https://ruteproyecto1.herokuapp.com/
+2. DCA:
+	* Se configuro el puerto 80, con Apache y Passanger. http://10.131.137.178:80
