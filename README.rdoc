@@ -28,11 +28,11 @@ Para instalar las tecnologías [<tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>
 == Desarrollo
 
 1. Modulo de locations:
-	* Para la creación de este CRUD, se siguió esta guía: http://librosweb.es/libro/introduccion_rails/capitulo_5.html
+	Para la creación de este CRUD, se siguió esta guía: http://librosweb.es/libro/introduccion_rails/capitulo_5.html
 2. Modulo de user, sessios:
-	* Parala gestion de usuarios y sesiones, se siguió esta guía: https://gist.github.com/thebucknerlife/10090014
+	Parala gestion de usuarios y sesiones, se siguió esta guía: https://gist.github.com/thebucknerlife/10090014
 3. API de Google Maps: 
-	* Para la visualización de la locaciones en el mapa se usaron las gemas <tt>gmaps4rails</tt> y <tt>geocoder</tt>, también se siguió la documentación de google: https://developers.google.com/maps/web/
+	Para la visualización de la locaciones en el mapa se usaron las gemas <tt>gmaps4rails</tt> y <tt>geocoder</tt>, también se siguió la documentación de google: https://developers.google.com/maps/web/
 
 == Despliegue Heroku 
 
@@ -49,6 +49,6 @@ Para ser la primera vez realizando una aplicación WEB tanto como el uso de <tt>
 == Resultados
 
 1. Heroku:
-	* La pruebas se realizaron con el siguiente usuario, email: moralito@eafit.edu.co y password: 1234. https://ruteproyecto1.herokuapp.com/
+	La pruebas se realizaron con el siguiente usuario, email: moralito@eafit.edu.co y password: 1234. https://ruteproyecto1.herokuapp.com/
 2. DCA:
-	* Se configuro el puerto 80, con Apache y Passanger. http://10.131.137.178:80
+	Se configuro el puerto 80, con Apache y Passanger. http://10.131.137.178:80
