@@ -7,14 +7,94 @@ Proyecto #1 para la materia tópicos especiales en telemática. Consiste en una 
 
 1. Gestión de locaciones: El usuario podrá crear, modificar, consultar y eliminar localizaciones.
        Modulo de locations
-
-* La creación de las locaciones se puede realizar automatica o manualmente.
+       * La creación de las locaciones se puede realizar automatica o manualmente.
 2. Gestión de usuarios: El usuario podrá crear un cuenta en el sistema y gestionar sus localizaciones.
-       <tt>Modulo de users</tt>
-       <tt>Modulo de sessions</tt>
+       Modulo de users
+       Modulo de sessions
 3. Visualización de locaciones: El usuario podrá ver sus locaciones en un mapa de google, donde estarán marcados los puntos donde estuvo.
-       <tt>API de Google Maps</tt>
+       API de Google Maps
 
 == Tecnologías
 
 Para el desarrollo de este proyecto se utilizó el lenguaje de programación <tt>Ruby</tt>, el framework de desarrolo <tt>Rails</tt> para el back-end y para el front-end se utilizaron templates propios del lenguaje en este caso para las vistas se utilizó <tt>html.erb</tt> y para la base de datos, en desarrollo se uso <tt>sqlite3</tt>, para test y producción se usó <tt>postgresql</tt>.
+
+== Instalación
+
+Para instalar las tecnologías [<tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>PostgreSQL</tt> y <tt>Git</tt>.], se siguió las siguientes guías:
+
+* Setup Ruby On Rails on Ubuntu 17.10: https://gorails.com/setup/ubuntu/17.10
+* Heroku CLI: https://devcenter.heroku.com/articles/heroku-cli
+
+== Desarrollo
+
+1. Modulo de locations
+	* Este modulo comprende de unas vistas, modelo y un controlador:
+
+	class LocationsController < ApplicationController
+	before_filter :authorize
+
+	#GET locations/new
+	def new
+		@location = Location.new
+	end
+	
+	#POST locations/
+	def create
+		@location = current_user.locations.new(location_params) #Extrae los parametros
+		if @location.save 
+			respond_to do |format|
+    			format.html { redirect_to new_location_path }
+    			format.js { }
+				#redirect_to @rute #Guarda el modelo en la base de datos
+			end
+		else
+			render 'new'
+		end
+	end
+
+ 	#DELETE /locations/:id(
+	def destroy
+  		@location = Location.find(params[:id])
+	  	@location.destroy
+ 
+  		redirect_to locations_path
+	end
+
+	#GET locations/:id - muestra el elemento creado
+	def show
+		@location = Location.find(params[:id])
+	end
+
+	#GET locations/ - lista de elemento creados
+	def index
+		#@location = Location.where("user_id LIKE ?", current_user.id)
+		@location = current_user.locations
+		@hash = Gmaps4rails.build_markers(@location) do |rutes, marker|
+  			marker.lat rutes.latitude
+  			marker.lng rutes.longitude
+  			#marker.infoWindow rutes.description
+  			marker.json({ title: rutes.title})
+  		end
+	end
+
+	#GET locations/:id/edit - retorna informacion para editar
+	def edit
+		@location = Location.find(params[:id])
+	end
+
+	#PATCH locations/:id
+	def update 
+		@location = Location.find(params[:id])
+
+		if @location.update(location_params)
+			redirect_to @location
+		else
+			render 'edit'
+		end
+	end
+
+	private
+		def location_params #Por seguridad debemos especificar a rails que parametros vamos a recibir
+			params.require(:location).permit(:latitude, :longitude, :addres, :description, :title)
+		end
+	end
