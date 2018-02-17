@@ -6,8 +6,9 @@ Proyecto #1 para la materia tópicos especiales en telemática. Consiste en una 
 == Requisitos funcionales
 
 1. Gestión de locaciones: El usuario podrá crear, modificar, consultar y eliminar localizaciones.
-       <tt>Modulo de locations</tt>
-       * La creación de las locaciones se puede realizar automatica o manualmente.
+       Modulo de locations
+
+* La creación de las locaciones se puede realizar automatica o manualmente.
 2. Gestión de usuarios: El usuario podrá crear un cuenta en el sistema y gestionar sus localizaciones.
        <tt>Modulo de users</tt>
        <tt>Modulo de sessions</tt>
