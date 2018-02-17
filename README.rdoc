@@ -1,7 +1,18 @@
 == RUTE - Proyecto #1
+== Juan David Loaiza Botero - jloaiz16@eafit.edu.co
 
-Aplicación WEB en tiempo real, registra la ubicación del usuario cada 5 segundos
-y muestra la visualización de esta en un mapa de google.
+Proyecto #1 para la materia tópicos especiales en telemática. Consiste en una aplicación WEB en tiempo real, registra la ubicación del usuario cada 5 segundos y muestra la visualización de esta en un mapa de google.
+
+== Requisitos funcionales
+
+1. Gestión de locaciones: El usuario podrá crear, modificar, consultar y eliminar localizaciones.
+       <tt>Modulo de locations</tt>
+       * La creación de las locaciones se puede realizar automatica o manualmente.
+2. Gestión de usuarios: El usuario podrá crear un cuenta en el sistema y gestionar sus localizaciones.
+       <tt>Modulo de users</tt>
+       <tt>Modulo de sessions</tt>
+3. Visualización de locaciones: El usuario podrá ver sus locaciones en un mapa de google, donde estarán marcados los puntos donde estuvo.
+       <tt>API de Google Maps</tt>
 
 == Tecnologías
 
