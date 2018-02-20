@@ -44,11 +44,11 @@ Para el despliegue en el Data Center Academico, se configuro el ambiente en el s
 
 == Conclusiones
 
-Para ser la primera vez realizando una aplicación WEB tanto como el uso de <tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>Heroku</tt> y <tt>Git</tt> el resultado obtenido es muy positivo. Más allá de las funcionalidades logradas, el aprendizaje obtenido es mucho más valioso. Lastimosamente no se pudo lograr que la aplicación funcionara correctamente en los tres ambientes [localhost, DCA y Heroku]. Para el localhost y Heroku, la aplicación funciona correcto y cumple con todos los requerimientos, cosa que no pudo suceder en el DCA ya que no se pudo desplegar por varios errores que no se pudieron resolver.
+Para ser la primera vez realizando una aplicación WEB tanto como el uso de <tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>Heroku</tt> y <tt>Git</tt> el resultado obtenido es muy positivo. Más allá de las funcionalidades logradas, el aprendizaje obtenido es mucho más valioso.
 
 == Resultados
 
 1. Heroku:
 	La pruebas se realizaron con el siguiente usuario, email: moralito@eafit.edu.co y password: 1234. https://ruteproyecto1.herokuapp.com/
 2. DCA:
-	Se configuro el puerto 80, con Apache y Passanger. http://10.131.137.178:80
+	Se configuro el puerto 80. http://10.131.137.178:80
