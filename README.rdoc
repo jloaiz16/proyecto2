@@ -1,54 +1,11 @@
-== RUTE - Proyecto #1
+== Proyecto #2 - Escalabilidad
+
 == Juan David Loaiza Botero - jloaiz16@eafit.edu.co
+== Juan Camilo Gomez Ruiz   - jgomez88@eafit.edu.co
+== Jorge Iván Ortiz Serna   - jortizs4@eafit.edu.co
 
-Proyecto #1 para la materia tópicos especiales en telemática. Consiste en una aplicación WEB en tiempo real, registra la ubicación del usuario cada 5 segundos y muestra la visualización de esta en un mapa de google.
-
-== Requisitos funcionales
-
-1. Gestión de locaciones: El usuario podrá crear, modificar, consultar y eliminar localizaciones.
-       Modulo de locations
-       * La creación de las locaciones se puede realizar automatica o manualmente.
-2. Gestión de usuarios: El usuario podrá crear un cuenta en el sistema y gestionar sus localizaciones.
-       Modulo de users
-       Modulo de sessions
-3. Visualización de locaciones: El usuario podrá ver sus locaciones en un mapa de google, donde estarán marcados los puntos donde estuvo.
-       API de Google Maps
+Proyecto #2 para la materia tópicos especiales en telemática. Consiste en una aplicación WEB en tiempo real, registra la ubicación del usuario cada 5 segundos y muestra la visualización de esta en un mapa de google. Esta aplicación estará optimizada y construida de tal forma que pueda responder a una gran cantidad de peticiones y usuarios.
 
 == Tecnologías
 
 Para el desarrollo de este proyecto se utilizó el lenguaje de programación <tt>Ruby</tt>, el framework de desarrolo <tt>Rails</tt> para el back-end y para el front-end se utilizaron templates propios del lenguaje en este caso para las vistas se utilizó <tt>html.erb</tt> y para la base de datos, en desarrollo se uso <tt>sqlite3</tt>, para test y producción se usó <tt>postgresql</tt>.
-
-== Instalación
-
-Para instalar las tecnologías [<tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>Heroku</tt> y <tt>Git</tt>], se siguió las siguientes guías:
-
-* Setup Ruby On Rails on Ubuntu 17.10: https://gorails.com/setup/ubuntu/17.10
-* Heroku CLI: https://devcenter.heroku.com/articles/heroku-cli
-
-== Desarrollo
-
-1. Modulo de locations:
-	Para la creación de este CRUD, se siguió esta guía: http://librosweb.es/libro/introduccion_rails/capitulo_5.html
-2. Modulo de user, sessios:
-	Parala gestion de usuarios y sesiones, se siguió esta guía: https://gist.github.com/thebucknerlife/10090014
-3. API de Google Maps: 
-	Para la visualización de la locaciones en el mapa se usaron las gemas <tt>gmaps4rails</tt> y <tt>geocoder</tt>, también se siguió la documentación de google: https://developers.google.com/maps/web/
-
-== Despliegue Heroku 
-
-Para el despliegue en Heroku, se creo una cuenta en la página, se descargó el Heroku toolbelt, se enlazó con el repositorio en Git y se siguió este tutorial para subir la app a Heroku: https://www.youtube.com/watch?v=0Dc-eVNA8ZM
-
-== Despliegue DCA
-
-Para el despliegue en el Data Center Academico, se configuro el ambiente en el servidor, se intalaron las tecnologías pertinente y se siguió la guía realizada por el profesor de la materia, la cual se encuentra en el siguiente link: https://github.com/st0263eafit/appwebArticulosRails
-
-== Conclusiones
-
-Para ser la primera vez realizando una aplicación WEB tanto como el uso de <tt>Ruby</tt>,<tt>Rails</tt>,<tt>PostgreSQL</tt>,<tt>Heroku</tt> y <tt>Git</tt> el resultado obtenido es muy positivo. Más allá de las funcionalidades logradas, el aprendizaje obtenido es mucho más valioso.
-
-== Resultados
-
-1. Heroku:
-	La pruebas se realizaron con el siguiente usuario, email: moralito@eafit.edu.co y password: 1234. https://ruteproyecto1.herokuapp.com/
-2. DCA:
-	Se configuro el puerto 80. http://10.131.137.178:80
