@@ -1,11 +1,11 @@
-# Este es una etiqueta <h1>
-# Este es una etiqueta <h2>
+# PROYECTO 2 <h1>
+# Tópicos especiales en telemática <h2>
 
-#* Definición del equipo, proyecto y aplicación: <h3>
+* __Definición del equipo, proyecto y aplicación:__
 	* a. Miembros del equipo y asignación de QA a miembros del equipo
 	* b. Selección de la aplicación basada en Proyecto1
 	* c. Descripción de la aplicación
 	* d. Requisitos Funcionales
-#* Detalles técnicos: <h3>
-#* Data Center Académico: <h3>
-#* Marco-referencia-v1:. <h3>
+* __Detalles técnicos:__
+* __Data Center Académico:__
+* __Marco-referencia-v1:__
