@@ -1,8 +1,8 @@
 == Proyecto #2 - Escalabilidad
 
-== Juan David Loaiza Botero - jloaiz16@eafit.edu.co
-== Juan Camilo Gomez Ruiz   - jgomez88@eafit.edu.co
-== Jorge Iván Ortiz Serna   - jortizs4@eafit.edu.co
+ Juan David Loaiza Botero - jloaiz16@eafit.edu.co
+ Juan Camilo Gomez Ruiz   - jgomez88@eafit.edu.co
+ Jorge Iván Ortiz Serna   - jortizs4@eafit.edu.co
 
 Proyecto #2 para la materia tópicos especiales en telemática. Consiste en una aplicación WEB en tiempo real, registra la ubicación del usuario cada 5 segundos y muestra la visualización de esta en un mapa de google. Esta aplicación estará optimizada y construida de tal forma que pueda responder a una gran cantidad de peticiones y usuarios.
 
