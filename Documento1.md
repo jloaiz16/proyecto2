@@ -22,5 +22,10 @@
 
 
 * __Detalles técnicos:__
+	1.Diseño:
+		*En el diseño se utilizara plantillas HTML,CSS
+	2.Implementacion:
+		*La parte funcional del proyecto se implementara en ruby on rails 5	
 * __Data Center Académico:__
+	@https://github.com/jloaiz16/proyecto2
 * __Marco-referencia-v1:__
