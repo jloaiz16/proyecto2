@@ -3,9 +3,9 @@
 
 ### Definición del equipo, proyecto y aplicación:
 __Miembros del equipo y asignación de QA’s:__
-Juan David Loaiza Botero  - Rendimiento 
-Juan Camilo Gomez Ruiz    - Disponibilidad
-Jorge Iván Ortiz Serna    - Seguridad
+* Juan David Loaiza Botero  - Rendimiento 
+* Juan Camilo Gomez Ruiz    - Disponibilidad
+* Jorge Iván Ortiz Serna    - Seguridad
 
 __Selección de la aplicación basada en Proyecto1:__
 La aplicación seleccionada por el equipo de desarrollo fue la del compañero Juan David Loaiza Botero, debido a que los demás proyectos se vieron envueltos en una serie de problemas como el despliegue de la aplicación en Heroku, entre otros. https://github.com/jloaiz16/proyecto1
@@ -14,10 +14,10 @@ __Descripción de la aplicación:__
 Consiste en una aplicación WEB en tiempo real, que registra la ubicación del usuario cada 5 segundos y muestra la visualización de esta en un mapa de google. Esta aplicación estará optimizada, totalmente disponible y segura.
 
 __Requisitos Funcionales:__
-__RF001 - Gestión de usuarios:__ El sistema permitirá a los usuarios registrarse para poder gestionar la información de su ubicación.
-__RF002 - Validación de usuarios:__ El sistema validará el registro del usuario, para permitir el ingreso y salida del sistema por medio de sesiones.
-__RF003 - Gestión de la ubicación:__ El sistema permitirá al usuario crear, modificar, consultar y eliminar ubicaciones, tanto manualmente como automáticamente cada 5 segundos.
-__RF004 - Visualización de ubicaciones:__ El sistema permitirá al usuario visualizar sus ubicaciones en un mapa de google por medio de marcadores, para que pueda conocer qué ruta a realizado. 
+* __RF001 - Gestión de usuarios:__ El sistema permitirá a los usuarios registrarse para poder gestionar la información de su ubicación.
+* __RF002 - Validación de usuarios:__ El sistema validará el registro del usuario, para permitir el ingreso y salida del sistema por medio de sesiones.
+* __RF003 - Gestión de la ubicación:__ El sistema permitirá al usuario crear, modificar, consultar y eliminar ubicaciones, tanto manualmente como automáticamente cada 5 segundos.
+* __RF004 - Visualización de ubicaciones:__ El sistema permitirá al usuario visualizar sus ubicaciones en un mapa de google por medio de marcadores, para que pueda conocer qué ruta a realizado. 
 
 ### Detalles técnicos
 
@@ -34,9 +34,9 @@ __Disponibilidad:__ El intervalo de tiempo que el sistema estará disponible ser
 __Rendimiento:__
 
 ### Data Center Académico:__
-Juan David Loaiza Botero  - 10.131.137.178:3000 
-Juan Camilo Gomez Ruiz    - 10.131.137.177:3000
-Jorge Iván Ortiz Serna    - 10.131.137.194:3000
+* Juan David Loaiza Botero  - 10.131.137.178:3000 
+* Juan Camilo Gomez Ruiz    - 10.131.137.177:3000
+* Jorge Iván Ortiz Serna    - 10.131.137.194:3000
 
 ### Marco-referencia-v1:
 
