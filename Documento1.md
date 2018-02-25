@@ -53,10 +53,10 @@ __B =__ Número de horas fuera de línea (corresponde a las horas de “caida de
 
 Porcentaje disponibilidad | Dia de 24 horas       |  Dia de 8 horas         |
 ------------------------- | --------------------- | ----------------------- |
-      90%                 | 876 horas(36.5 dias)  | 291.2 horas (12.13 dias)|                
-      95%                 | 438 horas(18.25 dias) | 145.6 horas (6.07 días) |                            
-      99.99%              | 52.56 minutos         | 17.47 minutos           |      
-      99.999%             |5.256 minutos          | 1.747 minutos           | 
+90%                       | 876 horas(36.5 dias)  | 291.2 horas (12.13 dias)|                
+95%                       | 438 horas(18.25 dias) | 145.6 horas (6.07 días) |                            
+99.99%                    | 52.56 minutos         | 17.47 minutos           |      
+99.999%                   | 5.256 minutos         | 1.747 minutos           | 
             
 que patrones usa ?
 
