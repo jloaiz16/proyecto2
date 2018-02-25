@@ -33,7 +33,7 @@ __Disponibilidad:__ El intervalo de tiempo que el sistema estará disponible ser
 
 __Rendimiento:__ Usar un mecanismo elaborado de caché. Tomando el inventario de todos los componentes y páginas clave de la aplicación y almacenando en caché los datos o computación para acelerar los procesos en general. Se evaluarán efectos de falla comunes, como pueden ser fallas de hardware, fallas de seguridad, desastres naturales, repentinos pico de tráfico de usuario, falla de red, falla de operaciones, etc
 
-### Data Center Académico:__
+### Data Center Académico:
 * Juan David Loaiza Botero  - 10.131.137.178:3000 
 * Juan Camilo Gomez Ruiz    - 10.131.137.177:3000
 * Jorge Iván Ortiz Serna    - 10.131.137.194:3000
