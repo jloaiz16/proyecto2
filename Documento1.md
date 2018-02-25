@@ -43,21 +43,35 @@ __Rendimiento:__
 #### Disponibilidad
 Es la capacidad de un sistema para estar continuamente disponible para los usuarios sin pérdida de servicio,ademas  esta indica el tiempo total que la aplicación o servicio esta disponible para cumplir con los requisitos del usuario final,la disponibilidad es fundamental  para las operaciones y continuidad del negocio.
 
-como se mide ?
+##### Como se mide
+Normalmente cuando se realiza un análisis y una negociación para determinar el objetivo de disponibilidad, se utiliza una medida basada en porcentajes:
 
+__Disponibilidad__ = ((A-B)/A)x100%)
+
+__A =__ Horas comprometidas de disponibilidad.
+__B =__ Número de horas fuera de línea (corresponde a las horas de “caida del sistema” durante el tiempo de disponibilidad comprometido).
+
+Porcentaje disponibilidad | Dia de 24 horas       |  Dia de 8 horas         |
+------------------------- | --------------------- | ----------------------- |
+      90%                 | 876 horas(36.5 dias)  | 291.2 horas (12.13 dias)|                
+      95%                 | 438 horas(18.25 dias) | 145.6 horas (6.07 días) |                            
+      99.99%              | 52.56 minutos         | 17.47 minutos           |      
+      99.999%             |5.256 minutos          | 1.747 minutos           | 
+            
 que patrones usa ?
 
+#### Seguridad
 
-
-| TITULO1| TITULO2|
-
-| ----- | ---- |
-
-| CONTENIDO COLUMNA 1 | CONTENIDO COLUMNA 2 |
-SEGURIDAD
-
-¿Que es ?
 La seguridad de aplicaciones web es una rama de la Seguridad Informática que se encarga específicamente de la seguridad de sitios web, aplicaciones web y servicios web. A un alto nivel, la seguridad de aplicaciones web se basa en los principios de la seguridad de aplicaciones pero aplicadas específicamente a la World Wide Web.
 
 como se mide ?
+Se mide en patrones como: Alto, Medio o Bajo.
+Alto: 
+
 que patrones usa ?
+
+Balancear riesgo y usabilidad: A mayor complejidad de nuestro sitio, aumenta el riesgo de que se sufra un ataque debido a sus características más elaboradas, es por eso que deben considerarse opciones de seguridad necesarias y sencillas pero eficientes, que ayuden a mitigar cualquier característica que la haga vulnerable.
+
+Rastrear el paso de los datos:  En las aplicaciones web, existen maneras de distinguir los orígenes de los datos y poder así reconocer cuando los datos pueden ser dignos de confianza y cuando no.
+
+Filtrar entradas: El filtrado es una de las piedras angulares de la seguridad en aplicaciones web. Es el proceso por el cual se prueba la validez de los datos. Si nos aseguramos que los datos son filtrados apropiadamente al entrar, podemos eliminar el riesgo de que datos contaminados sean usados para provocar funcionamientos no deseados en la aplicación.
