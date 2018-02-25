@@ -61,7 +61,8 @@ Porcentaje disponibilidad | Dia de 24 horas       |  Dia de 8 horas         |
 #### Patrones
 
 * __Failover:__ Durante los escenarios de carga máxima, la capacidad del sistema para estar operativo en un evento de una falla de nodo o componente
-* __ Failback:__ Generalmente ocurre después de failover, donde el nodo primario o primario el sitio se recuperará de la falla y estará en pleno funcionamiento
+
+* __Failback:__ Generalmente ocurre después de failover, donde el nodo primario o primario el sitio se recuperará de la falla y estará en pleno funcionamiento
 
 * __Replicación:__ Esto implica copiar los datos del nodo primario a toda su copia de seguridad y nodos en espera para que sea fácil cambiar en caso de conmutación por error.
 
@@ -78,8 +79,10 @@ La seguridad de aplicaciones web es una rama de la Seguridad Informática que se
 #### Cómo se mide
 
 * __Riesgos:__ La aplicación web posee una serie de riesgos los cuales son medidos en escalas de: Alto, Medio o Bajo .
+
 * __Impacto del riesgo:__ Es la manera en la cual impacta el riesgo a la aplicación web, son medidos en escalas de: Alto, Medio o Bajo.
-*_Impacto general_: Es el resultante entre la evaluación de la posibilidad de que el riesgo se presente y el mismo impacto causante en el sistema de dicho riesgo. Son medidos en escalas de: Alto, Medio o Bajo.
+
+* __Impacto general:__ Es el resultante entre la evaluación de la posibilidad de que el riesgo se presente y el mismo impacto causante en el sistema de dicho riesgo. Son medidos en escalas de: Alto, Medio o Bajo.
 
 #### Patrones y buenas prácticas
 
@@ -111,10 +114,10 @@ La capacidad de un sistema se mide por medio de la ley de Little (L = A x W), do
 * __A:__ Promedio de llegadas
 * __W:__ Tiempo de atención por servicio
 
-Ejemplo:
-	100 solicitudes web por segundo
-	0.5 s para atender cada solicitud
-	L = 100 * 0.5 = 50 solicitud concurrentemente
+##### Ejemplo
+* 100 solicitudes web por segundo
+* 0.5 s para atender cada solicitud
+* L = 100 * 0.5 = 50 solicitud concurrentemente
 
 #### Patrones y buenas prácticas
 
