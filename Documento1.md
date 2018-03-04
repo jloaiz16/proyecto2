@@ -1,4 +1,4 @@
-# PROYECTO 2 <h1>
+# PROYECTO 2 - Documento 1<h1>
 # Tópicos especiales en telemática <h2>
 
 ### Definición del equipo, proyecto y aplicación:
