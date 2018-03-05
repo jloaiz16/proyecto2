@@ -10,28 +10,28 @@ __Miembros del equipo y asignación de QA’s:__
 ### 1. Análisis:
 
 __Escenario de Rendimiento__
-* __ Fuente de estímulo:__ Aplicación WEB.
-* __ Estímulo:__ Se presenta un fallo en el servidor.
-* __ Ambiente:__ Se está ejecutando con sobre carga de tráfico. 
-* __ Artefacto:__ El estímulo ocurre sobre el servidor.
-* __ Respuesta:__ El balanceador de carga aísla el servidor malo.
-* __ Medida de respuesta:__ Por este fallo el tiempo de respuesta a usuarios cae un 20%.
+* __Fuente de estímulo:__ Aplicación WEB.
+* __Estímulo:__ Se presenta un fallo en el servidor.
+* __Ambiente:__ Se está ejecutando con sobre carga de tráfico. 
+* __Artefacto:__ El estímulo ocurre sobre el servidor.
+* __Respuesta:__ El balanceador de carga aísla el servidor malo.
+* __Medida de respuesta:__ Por este fallo el tiempo de respuesta a usuarios cae un 20%.
 
 __Escenario de Disponiblidad__
-* __ Fuente de estímulo:__  Interfaz WEB
-* __ Estímulo:__ Se presenta un fallo en el servidor.
-* __ Ambiente:__ Falla concreta en la respuesta del servidor para la petición de usuario
-* __ Artefacto:__ El estímulo ocurre sobre el servidor.
-* __ Respuesta:__ Posible reacción a un fallo del sistema(Balanceador de carga). 
-* __ Medida de respuesta:__ Tratar de denegar el servicio del Sistema el menor tiempo posible.
+* __Fuente de estímulo:__  Interfaz WEB
+* __Estímulo:__ Se presenta un fallo en el servidor.
+* __Ambiente:__ Falla concreta en la respuesta del servidor para la petición de usuario
+* __Artefacto:__ El estímulo ocurre sobre el servidor.
+* __Respuesta:__ Posible reacción a un fallo del sistema(Balanceador de carga). 
+* __Medida de respuesta:__ Tratar de denegar el servicio del Sistema el menor tiempo posible.
 
 __Escenario de Seguridad__
-* __ Fuente de estímulo:__ Aplicación WEB
-* __ Estímulo:__ Vulnerabilidad en el acceso a los datos
-* __ Ambiente:__ Se intenta acceder a los datos sin autenticación
-* __ Artefacto:__ Base de datos
-* __ Respuesta:__ Posible reacción de persistencia de sesiones
-* __ Medida de respuesta:__ No se puede acceder a los datos
+* __Fuente de estímulo:__ Aplicación WEB
+* __Estímulo:__ Vulnerabilidad en el acceso a los datos
+* __Ambiente:__ Se intenta acceder a los datos sin autenticación
+* __Artefacto:__ Base de datos
+* __Respuesta:__ Posible reacción de persistencia de sesiones
+* __Medida de respuesta:__ No se puede acceder a los datos
 
 
 ### 2. Diseño:
