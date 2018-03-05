@@ -10,28 +10,28 @@ __Miembros del equipo y asignación de QA’s:__
 ### 1. Análisis:
 
 __Escenario de Rendimiento__
-* __1. Fuente de estímulo:__ Aplicación WEB.
-* __2. Estímulo:__ Se presenta un fallo en el servidor.
-* __3. Ambiente:__ Se está ejecutando con sobre carga de tráfico. 
-* __4. Artefacto:__ El estímulo ocurre sobre el servidor.
-* __5. Respuesta:__ El balanceador de carga aísla el servidor malo.
-* __6. Medida de respuesta:__ Por este fallo el tiempo de respuesta a usuarios cae un 20%.
+* __ Fuente de estímulo:__ Aplicación WEB.
+* __ Estímulo:__ Se presenta un fallo en el servidor.
+* __ Ambiente:__ Se está ejecutando con sobre carga de tráfico. 
+* __ Artefacto:__ El estímulo ocurre sobre el servidor.
+* __ Respuesta:__ El balanceador de carga aísla el servidor malo.
+* __ Medida de respuesta:__ Por este fallo el tiempo de respuesta a usuarios cae un 20%.
 
 __Escenario de Disponiblidad__
-* __1. Fuente de estímulo:__  Interfaz WEB
-* __2. Estímulo:__Se presenta un fallo en el servidor.
-* __3. Ambiente:__Falla concreta en la respuesta del servidor para la petición de usuario
-* __4. Artefacto:__El estímulo ocurre sobre el servidor.
-* __5. Respuesta:__Posible reacción a un fallo del sistema(Balanceador de carga). 
-* __6. Medida de respuesta:__Tratar de denegar el servicio del Sistema el menor tiempo posible.
+* __ Fuente de estímulo:__  Interfaz WEB
+* __ Estímulo:__ Se presenta un fallo en el servidor.
+* __ Ambiente:__ Falla concreta en la respuesta del servidor para la petición de usuario
+* __ Artefacto:__ El estímulo ocurre sobre el servidor.
+* __ Respuesta:__ Posible reacción a un fallo del sistema(Balanceador de carga). 
+* __ Medida de respuesta:__ Tratar de denegar el servicio del Sistema el menor tiempo posible.
 
 __Escenario de Seguridad__
-* __1. Fuente de estímulo:__ Aplicación WEB
-* __2. Estímulo:__ Vulnerabilidad en el acceso a los datos
-* __3. Ambiente:__ Se intenta acceder a los datos sin autenticación
-* __4. Artefacto:__ Base de datos
-* __5. Respuesta:__ Posible reacción de persistencia de sesiones
-* __6. Medida de respuesta:__ No se puede acceder a los datos
+* __ Fuente de estímulo:__ Aplicación WEB
+* __ Estímulo:__ Vulnerabilidad en el acceso a los datos
+* __ Ambiente:__ Se intenta acceder a los datos sin autenticación
+* __ Artefacto:__ Base de datos
+* __ Respuesta:__ Posible reacción de persistencia de sesiones
+* __ Medida de respuesta:__ No se puede acceder a los datos
 
 
 ### 2. Diseño:
@@ -45,7 +45,7 @@ __Escenario de Seguridad__
 
 
 * __Patrón de arquitectura:__
-	* __Patrón Modelo-Vista-Controlador (MVC): __ Separa presentación e interacción de los datos del sistema. El sistema se estructura en tres componentes lógicos que interactúan entre sí. El componente __Modelo__ maneja los datos del sistema y las operaciones asociadas a esos datos. El componente __Vista__ define y gestiona cómo se presentan los datos al usuario. El componente __Controlador__ dirige la interacción del usuario (por ejemplo, teclas oprimidas, clics del mouse, etc) y pasa estas interacciones a Vista y Modelo.
+	* __Patrón Modelo-Vista-Controlador(MVC):__ Separa presentación e interacción de los datos del sistema. El sistema se estructura en tres componentes lógicos que interactúan entre sí. El componente __Modelo__ maneja los datos del sistema y las operaciones asociadas a esos datos. El componente __Vista__ define y gestiona cómo se presentan los datos al usuario. El componente __Controlador__ dirige la interacción del usuario (por ejemplo, teclas oprimidas, clics del mouse, etc) y pasa estas interacciones a Vista y Modelo.
 	* ![patron](http://img.fenixzone.net/i/OCK09dh.png)
 
 * __Best practices:__
