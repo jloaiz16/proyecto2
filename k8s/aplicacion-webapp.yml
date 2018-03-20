@@ -19,7 +19,8 @@ spec:
         - name: nodejs-port
           containerPort: 3000
       - name: api-nginx
-        image: nginx:1.13.8
+      #1.13.8
+        image: nginx:1.13.9
         ports:
         - name: http-port
           containerPort: 80
@@ -32,4 +33,4 @@ spec:
           name: webapp-nginx-config
           items:
           - key: nginx.conf
-            path: nginx.confss
+            path: nginx.conf
