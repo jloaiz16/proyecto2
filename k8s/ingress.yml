@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: articulos-ingress
+  namespace: proyecto6
+
+  # annotations:
+  #   kubernetes.io/ingress.class: "tectonic"
+spec:
+  rules:
+    - host: proyecto6.dis.eafit.edu.co
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: railsapp-svc
+              servicePort: 80

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aplicacion
+  namespace: proyecto6
+
+spec:
+  ports:
+  - port: 5432
+    protocol: TCP
+  selector:
+    app: aplicacion
+  type: NodePort
