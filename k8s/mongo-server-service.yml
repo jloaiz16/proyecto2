@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: railsapp-service
-  namespace: proyecto6
+  name: mongo-server
+  namespace: <namespace>
+
 spec:
   ports:
-  - port: 80
+  - port: 27017
     protocol: TCP
   selector:
-    app: railsapp
+    app: mongo-server
   type: NodePort

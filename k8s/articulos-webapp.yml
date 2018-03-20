@@ -1,18 +1,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: railsapp-deployment
-  namespace: proyecto6
+  name: articulos-webapp-deployment
+  namespace: <namespace>
+
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: railsapp
+        app: articulos-webapp
     spec:
       containers:
-      - name: railsapp
-        image: jloaiz16/aplicacion:1.0
+      - name: articulos-webapp
+        image: <docker_user>/artnode:<version>
 
         ports:
         - name: nodejs-port
