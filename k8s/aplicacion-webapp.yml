@@ -1,19 +1,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: articulos-webapp-deployment
-  namespace: <namespace>
+  name: aplicacion-webapp-deployment
+  namespace: proyecto6
 
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: articulos-webapp
+        app: aplicacion-webapp
     spec:
       containers:
-      - name: articulos-webapp
-        image: <docker_user>/artnode:<version>
+      - name: aplicacion-webapp
+        image: jloaiz16/proyecto2:1.0
 
         ports:
         - name: nodejs-port
@@ -32,4 +32,4 @@ spec:
           name: webapp-nginx-config
           items:
           - key: nginx.conf
-            path: nginx.conf
+            path: nginx.confss
