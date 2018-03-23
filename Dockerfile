@@ -1,5 +1,4 @@
-#Taken From: https://docs.docker.com/compose/rails/#define-the-project and adapted.
-FROM ruby:2.4.1
+FROM ruby:2.5.0
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 RUN mkdir /proyecto2
 WORKDIR /proyecto2
