@@ -16,7 +16,7 @@
     <!-- :title campo de la base de datos que se va a modificar-->
     <%= f.text_field :latitude, placeholder: "Ingrese latitud", class:"form-control", id: "lat" %>
   </div>
- 
+
   <div class="field">
     <%= f.text_field :longitude, placeholder: "Ingrese longitud", class:"form-control", id: "lot"%>
   </div>
@@ -45,10 +45,13 @@
 
 
 <script type="text/javascript">
-      
+
   var x = document.getElementById("demo");
   var stop = false;
   var form = document.getElementById("rute_form");
+  var last_lat = 0.0;
+  var last_lot = 0.0;
+  var delta = 0.00018;
 
   function stopLocation() {
     stop = true;
@@ -57,7 +60,7 @@
   function getLocation() {
       if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition, showError);
-      } else { 
+      } else {
           x.innerHTML = "Geolocation is not supported by this browser.";
       }
       if(stop == false) {
@@ -66,20 +69,26 @@
       }else {
         alert("Stop geolocation");
       }
-      
+
   }
 
   function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      x.innerHTML = "Latitude: " + position.coords.latitude +
       "<br>Longitude: " + position.coords.longitude;
       var my_lat = position.coords.latitude;
       var my_lot = position.coords.longitude;
-      $(document).ready(function(){
-        $("#lat").val(my_lat);
-        $("#lot").val(my_lot);
-      });
-      sendPosition(my_lat,my_lot);
-      //form.submit();
+      if (validateData(my_lat,my_lot)){
+          $(document).ready(function(){
+            $("#lat").val(my_lat);
+            $("#lot").val(my_lot);
+          });
+          last_lat = Math.abs(my_lat);
+          last_lot = Math.abs(my_lot);
+          sendPosition(my_lat,my_lot);
+          //form.submit();
+      }else{
+         // ...
+      }
   }
 
   function sendPosition(lat, lon) {
@@ -112,5 +121,16 @@
               break;
       }
   }
-  
+
+  //Validamos que no ingrese la misma posicion
+  function validateData(lat_new, lot_new) {
+    lat_new = Math.abs(lat_new);
+    lot_new = Math.abs(lot_new);
+    if (lat_new-last_lat > delta && lot_new-last_lot > delta) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+
 </script>
