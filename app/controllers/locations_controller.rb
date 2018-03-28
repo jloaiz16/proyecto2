@@ -5,11 +5,11 @@ class LocationsController < ApplicationController
 	def new
 		@location = Location.new
 	end
-	
+
 	#POST locations/
 	def create
 		@location = current_user.locations.new(location_params) #Extrae los parametros
-		if @location.save 
+		if @location.save
 			respond_to do |format|
     			format.html { redirect_to new_location_path }
     			format.js { }
@@ -24,7 +24,7 @@ class LocationsController < ApplicationController
 	def destroy
   		@location = Location.find(params[:id])
 	  	@location.destroy
- 
+
   		redirect_to locations_path
 	end
 
@@ -51,7 +51,7 @@ class LocationsController < ApplicationController
 	end
 
 	#PATCH locations/:id
-	def update 
+	def update
 		@location = Location.find(params[:id])
 
 		if @location.update(location_params)

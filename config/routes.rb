@@ -4,9 +4,12 @@ Rails.application.routes.draw do
 
   # Defino rutas de las localizaciones
   resources :locations
-  
+
   # Defino ruta de peticion
   get 'welcome/index'
+
+  # Ruta para listar ubicaciones
+  get 'welcome/list'
 
   # Rutas para usuarios
   get '/signup' => 'users#new'
