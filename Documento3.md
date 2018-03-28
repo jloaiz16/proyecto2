@@ -1,68 +1,20 @@
-# PROYECTO 2 - Documento 2<h1>
+# PROYECTO 2 - Documento 3<h1>
 # Tópicos especiales en telemática <h2>
 
-### Atributos de calidad seleccionados:
-__Miembros del equipo y asignación de QA’s:__
+### 1. Miembros del equipo
 * Juan David Loaiza Botero  - Rendimiento
 * Juan Camilo Gomez Ruiz    - Disponibilidad
 * Jorge Iván Ortiz Serna    - Seguridad
 
-### 1. Análisis:
+### 2. Diseño de arquitectura de la Aplicación y Sistema
+	* Vista de desarrollo
+	* Vista de despliegue
 
-__Escenario de Rendimiento__
-* __Fuente de estímulo:__ Aplicación WEB.
-* __Estímulo:__ Se presenta un fallo en el servidor.
-* __Ambiente:__ Se está ejecutando con sobre carga de tráfico.
-* __Artefacto:__ El estímulo ocurre sobre el servidor.
-* __Respuesta:__ El balanceador de carga aísla el servidor malo.
-* __Medida de respuesta:__ Por este fallo el tiempo de respuesta a usuarios cae un 20%.
+### 3. Implementación y Pruebas por Atributo de Calidad
+	* Implementación
+	* Esquemas de pruebas para comprobar el Atributo de Calidad
 
-__Escenario de Disponiblidad__
-* __Fuente de estímulo:__  Interfaz WEB
-* __Estímulo:__ Se presenta un fallo en el servidor.
-* __Ambiente:__ Falla concreta en la respuesta del servidor para la petición de usuario
-* __Artefacto:__ El estímulo ocurre sobre el servidor.
-* __Respuesta:__ Posible reacción a un fallo del sistema(Balanceador de carga).
-* __Medida de respuesta:__ Tratar de denegar el servicio del Sistema el menor tiempo posible.
-
-__Escenario de Seguridad__
-* __Fuente de estímulo:__ Aplicación WEB
-* __Estímulo:__ Vulnerabilidad en el acceso a los datos
-* __Ambiente:__ Se intenta acceder a los datos sin autenticación
-* __Artefacto:__ Base de datos
-* __Respuesta:__ Posible reacción de persistencia de sesiones
-* __Medida de respuesta:__ No se puede acceder a los datos
-
-
-### 2. Diseño:
-* __Vistas de arquitectura:__
-	* __Vista lógica:__
-	* ![vista](http://img.fenixzone.net/i/EU0jXZP.jpeg)
-	* __Vista de desarrollo:__
-	* ![vista](http://img.fenixzone.net/i/gSa3L5I.png)
-	* __Vista física:__
-	* ![vista](http://img.fenixzone.net/i/rLvaHY8.png)
-
-
-* __Patrón de arquitectura:__
-	* __Patrón Modelo-Vista-Controlador(MVC):__ Separa presentación e interacción de los datos del sistema. El sistema se estructura en tres componentes lógicos que interactúan entre sí. El componente __Modelo__ maneja los datos del sistema y las operaciones asociadas a esos datos. El componente __Vista__ define y gestiona cómo se presentan los datos al usuario. El componente __Controlador__ dirige la interacción del usuario (por ejemplo, teclas oprimidas, clics del mouse, etc) y pasa estas interacciones a Vista y Modelo.
-	* ![patron](http://img.fenixzone.net/i/OCK09dh.png)
-
-* __Best practices:__
-	* __Garantizar una recuperación de desastres:__ Debe tener una réplica de espejo del código y los datos desde el sitio primario. Esto sirve como una copia de seguridad en caso de fallo total del sitio primario.
-	* __DRY(Don’t repeat yourself):__ No repetir código, el código duplicado es propenso a generar errores y es difícil de mantener.
-	* __KISS(Keep It Simple Stupid):__ Evitar la complejidad y hacer el diseño del programa sencillo.
-
-* __Tácticas:__
-Para la mantener nuestra aplicaciones con alta disponibilidad y rendimiento, usaremos tácticas enfocada a la tolerancia de fallos. Nos enfocaremos en detección de fallos, recuperación de fallos y prevención de fallos
-
-* __Herramientas:__
-Para verificar el buen funcionamiento de los QA’s de nuestra aplicación WEB usaremos:
-	* __Google PageSpeed ​​Insights:__ Es un servicio que analiza el contenido de una página web y genera sugerencias para que sus páginas se carguen más rápido. La reducción de los tiempos de carga de la página reduce las tasas de rebote y aumenta las tasas de conversión.
-	* __JMeter:__ Se usa para probar el rendimiento en recursos estáticos y dinámicos (archivos, servlets, scripts Perl, objetos Java, bases de datos y consultas, servidores FTP y más). También puede usarlo para simular una carga pesada en un servidor, red u objeto para probar su fortaleza o analizar el rendimiento general bajo diferentes tipos de carga.
-	* __Locust.io:__ Es una gran herramienta para entender el rendimiento en el lado del servidor.
-
-### 3. Marco-referencia-v2:
+### 4. Marco-referencia-v3:
 
 ### Disponibilidad
 Es la capacidad de un sistema para estar continuamente disponible para los usuarios sin pérdida de servicio,además esta indica el tiempo total que la aplicación o servicio esta disponible para cumplir con los requisitos del usuario final,la disponibilidad es fundamental  para las operaciones y continuidad del negocio.
