@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: loadbalancernginx-ingress
+  namespace: proyecto6
+spec:
+  rules:
+    - host: proyecto6.dis.eafit.edu.co
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: nginx-service
+              servicePort: 80
