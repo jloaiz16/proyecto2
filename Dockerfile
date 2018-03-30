@@ -1,7 +1,7 @@
 FROM ruby:2.5.0
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
-RUN mkdir /proyecto2
-WORKDIR /proyecto2
+RUN mkdir /proyecto2QA
+WORKDIR /proyecto2QA
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
