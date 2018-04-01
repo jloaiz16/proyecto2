@@ -79,6 +79,8 @@ Con esto se podrán hacer las consultas de las ubicaciones de cada usuario más 
 #### Ejemplo
 Consulta a la base de datos __sin indexación__ de datos:
 ![consulta1](http://img.fenixzone.net/i/WhCcXzk.jpeg)
+En este caso la consulta toma un tiempo de `344.3ms`.
 
 Consulta a la base de datos __con indexación__ de datos:
 ![consulta2](http://img.fenixzone.net/i/qbiwsJU.jpeg)
+En este caso la misma consulta toma un tiempo de `0.3ms`.
