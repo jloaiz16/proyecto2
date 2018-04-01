@@ -70,7 +70,15 @@ Las consultas a la base por lo general juegan el papel más importante en el ren
       end
     end
 ```
-En schema.rb
+En `schema.rb`
 ```ruby
     add_index "locations", ["user_id"], name: "index_locations_on_user_id"
 ```
+Con esto se podrán hacer las consultas de las ubicaciones de cada usuario más rápido por medio del `user_id` y `location_id` en las indexaciones.
+
+#### Ejemplo
+Consulta a la base de datos __sin indexación__ de datos:
+![consulta1](http://img.fenixzone.net/i/WhCcXzk.jpeg)
+
+Consulta a la base de datos __con indexación__ de datos:
+![consulta2](http://img.fenixzone.net/i/qbiwsJU.jpeg)
