@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330131234) do
+ActiveRecord::Schema.define(version: 20180402064035) do
+
+  create_table "authentications", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,6 +36,16 @@ ActiveRecord::Schema.define(version: 20180330131234) do
 
   add_index "locations", ["user_id"], name: "index_locations_on_user_id"
 
+  create_table "usergoogles", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -33,5 +53,8 @@ ActiveRecord::Schema.define(version: 20180330131234) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  add_index "users", ["email", nil], name: "index_users_on_email_and_sign_in_count"
+  add_index "users", [nil], name: "index_users_on_location_id"
 
 end
