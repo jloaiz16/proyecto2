@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402064035) do
+ActiveRecord::Schema.define(version: 20180403163611) do
 
   create_table "authentications", force: :cascade do |t|
     t.string   "provider"
@@ -24,17 +24,17 @@ ActiveRecord::Schema.define(version: 20180402064035) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "usergoogle_id"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "addres"
     t.text     "description"
     t.string   "title"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
-  add_index "locations", ["user_id"], name: "index_locations_on_user_id"
+  add_index "locations", ["usergoogle_id"], name: "index_locations_on_usergoogle_id"
 
   create_table "usergoogles", force: :cascade do |t|
     t.string   "provider"
@@ -55,6 +55,5 @@ ActiveRecord::Schema.define(version: 20180402064035) do
   end
 
   add_index "users", ["email", nil], name: "index_users_on_email_and_sign_in_count"
-  add_index "users", [nil], name: "index_users_on_location_id"
 
 end

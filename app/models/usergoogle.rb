@@ -9,4 +9,5 @@ class Usergoogle < ActiveRecord::Base
       user.save!
     end
   end
+	has_many :locations
 end
